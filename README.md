@@ -36,4 +36,21 @@ cafeAPI.interceptors.request.use(
 )
 ```
 
-El Work around 
+
+El **Work around** para esto es mandar llamar la funcion **logOut()** dentro del `useffect` del [authContext.tsx](https://github.com/manuels-bts/ReactNative-Productos/blob/master/ProductosApp/src/context/authContext.tsx)
+
+```
+   useEffect(() => {
+        logOut()
+        checkToken()
+    }, [])
+```
+
+**De lo contrario obtenia un inifinte loading al inicar la aplicacion**
+
+[NavigationStack.tsx](https://github.com/manuels-bts/ReactNative-Productos/blob/master/ProductosApp/src/navigation/NavigationStack.tsx)
+```
+if (status === 'checking') return <LoadingScreen />
+
+```
+
