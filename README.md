@@ -20,7 +20,7 @@ Por alguna razon, la funcion **checkToken()** del `authContext.tsx` me esta reto
   ![image](https://github.com/manuels-bts/ReactNative-Productos/assets/116088500/3c350efe-044a-45b0-9d1f-bef0e41bf70c)
 
 
-Lo anterior lo compare lado a lado con el codigo del curso y con el de compañeros. Esto comenzo desde que se agrego el siguiente codigo en este [archivo de cafeAPI.tsx](https://github.com/manuels-bts/ReactNative-Productos/blob/master/ProductosApp/src/api/cafeAPI.tsx):
+Lo anterior lo **compare lado a lado con el codigo del curso y con el de compañeros** sin cambio alguno. Esto comenzo desde que se agrego el siguiente codigo en este archivo de  [cafeAPI.tsx](https://github.com/manuels-bts/ReactNative-Productos/blob/master/ProductosApp/src/api/cafeAPI.tsx):
 ```
 // Si existe el token, anexalo en los headers de cualquier peticion 
 cafeAPI.interceptors.request.use(
@@ -37,7 +37,7 @@ cafeAPI.interceptors.request.use(
 ```
 
 
-El **Work around** para esto es mandar llamar la funcion **logOut()** dentro del `useffect` del [authContext.tsx](https://github.com/manuels-bts/ReactNative-Productos/blob/master/ProductosApp/src/context/authContext.tsx)
+El **Work around** para esto es mandar llamar la funcion **logOut()** dentro del `useffect` del [authContext.tsx](https://github.com/manuels-bts/ReactNative-Productos/blob/master/ProductosApp/src/context/authContext.tsx) y autenticarse cada vez para acceder
 
 ```
    useEffect(() => {
