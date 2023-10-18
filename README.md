@@ -9,7 +9,7 @@ En pocas palabras, consumiremos servicios del backend que levantamos en la secci
 
 
 # Feedback
-Por alguna razon, la funcion **checkToken()****authContext** me esta retornando estos errores: 
+Por alguna razon, la funcion **checkToken()** del `authContext.tsx` me esta retornando estos errores: 
 
 - En simulador:
 
