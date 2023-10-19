@@ -8,7 +8,7 @@ const cafeAPI = axios.create({ baseURL });
 // Si existe el token, anexalo en los headers de cualquier peticion 
 cafeAPI.interceptors.request.use(
     async (config) => {
-        const token = AsyncStorage.getItem('token')
+        const token = await AsyncStorage.getItem('token')
 
         if (token) {
             config.headers['x-token'] = token
